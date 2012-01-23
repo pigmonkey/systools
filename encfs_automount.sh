@@ -40,6 +40,12 @@ ENCFS="/usr/bin/encfs"
 # Specify the location of the GnuPG binary.
 GPG="/usr/bin/gpg"
 
+# Specify the location of the cat(1) binary.
+CAT="/bin/cat"
+
+# Specify the location of the grep(1) binary.
+GREP="/bin/grep"
+
 # End configuration here.
 ###############################################################################
 
@@ -54,14 +60,17 @@ do
     # Proceed only if the file that holds the passphrase is not zero and the
     # EncFS root directory exists.
     if [ -s "$passfile" -a -d "$root" ]; then
-        # Decrypt the EncFS passphrase.
-        passphrase=$($GPG --batch -q -d $passfile)
-        # If the EncFS mount point does not exist, create it.
-        if [ ! -d "$mount" ]; then
-            mkdir $mount
+        # Only continue if the current volume is not already mounted.
+        if ! $CAT /etc/mtab | $GREP -q "^encfs $mount "; then
+            # Decrypt the EncFS passphrase.
+            passphrase=$($GPG --batch -q -d $passfile)
+            # If the EncFS mount point does not exist, create it.
+            if [ ! -d "$mount" ]; then
+                mkdir $mount
+            fi
+            # Mount the EncFS filesystem.
+            echo $passphrase | $ENCFS --stdinpass $root $mount
         fi
-        # Mount the EncFS filesystem.
-        echo $passphrase | $ENCFS --stdinpass $root $mount
     fi
 
 done
