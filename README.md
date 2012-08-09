@@ -24,6 +24,15 @@ it only needs to be entered once. This works for both symmetric and asymmetric
 encryption.
 
 
+fehbrowser.sh
+-------------
+
+Open an image in [feh](http://feh.finalrewind.org/) while allowing all other
+images in the directory to be viewed as well. Useful for file browsers.
+
+Source: [https://wiki.archlinux.org/index.php/Feh#File_Browser_Image_Launcher]
+
+
 memusage.py
 -----------
 
