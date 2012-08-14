@@ -43,3 +43,13 @@ the executing user and presents the result in a human-readable format.
 
 It is useful for [WebFaction](http://www.webfaction.com/) users and those in a
 similar environment.
+
+
+pipup.py
+--------
+
+Check if a newer version of installed packages are available on PyPI.
+
+Author: Artur Siekielski
+Source: http://code.activestate.com/recipes/577708-check-for-package-updates-on-pypi-works-best-in-pi/
+License: [MIT](http://opensource.org/licenses/mit-license.php/)
