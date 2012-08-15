@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # Check if a newer version of installed packages are available on PyPI.
-# Author: Artur Siekielski
+# Original Author: Artur Siekielski
 # Source: http://code.activestate.com/recipes/577708-check-for-package-updates-on-pypi-works-best-in-pi/
 # License: MIT (http://opensource.org/licenses/mit-license.php/)
 
