@@ -26,4 +26,4 @@ for i in $frmtall; do
     [[ $i == $file ]] && c=$((${#arr[@]} - 1))
 done
 
-exec feh --action ';gimp %f&' "$@" -- "${arr[@]:c}" "${arr[@]:0:c}"
+exec feh -. -B black --action ';gimp %f&' "$@" -- "${arr[@]:c}" "${arr[@]:0:c}"
