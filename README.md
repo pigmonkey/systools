@@ -33,6 +33,16 @@ images in the directory to be viewed as well. Useful for file browsers.
 Source: https://wiki.archlinux.org/index.php/Feh#File_Browser_Image_Launcher
 
 
+mailcheck.sh
+------------
+
+A bash script to get new mail via [OfflineImap](http://offlineimap.org/).
+
+If a continuously running OfflineImap process exists, the script will execute
+`offlineimap` once. If no process exists, the script will launch a continuously
+running OfflineImap process.
+
+
 memusage.py
 -----------
 
