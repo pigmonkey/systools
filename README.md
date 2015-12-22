@@ -4,6 +4,13 @@ Systools
 These are miscellaneous helpers and system administration scripts.
 
 
+browser.sh
+----------
+
+Use [rofi](https://davedavenport.github.io/rofi/) to present a choice of
+browser with which to open the given URL.
+
+
 encfs_automount.sh
 ------------------
 
