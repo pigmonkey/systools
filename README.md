@@ -62,6 +62,12 @@ It is useful for [WebFaction](http://www.webfaction.com/) users and those in a
 similar environment.
 
 
+pinboard-backup.sh
+------------------
+
+A bash script to dump bookmarks as JSON via [Pinboard's API](https://pinboard.in/api/).
+
+
 pipup.py
 --------
 
