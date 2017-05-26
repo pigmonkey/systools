@@ -11,6 +11,19 @@ Use [rofi](https://davedavenport.github.io/rofi/) to present a choice of
 browser with which to open the given URL.
 
 
+display_tasks.sh
+----------------
+
+Display [Khal](https://lostpackets.de/khal/) events and
+[Taskwarrior](https://taskwarrior.org/) tasks. I bind this to a floating window
+in [i3](https://i3wm.org/) in order to get a quick overview of what I should be
+doing.
+
+    # ~/.config/i3/config
+    for_window [title="^taskwin$"] floating enable
+    bindsym $mod+t exec termite --title taskwin --geometry=800x600 -e ~/bin/display_tasks.sh
+
+
 encfs_automount.sh
 ------------------
 
