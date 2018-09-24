@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export WGET_USER_AGENT="Mozilla/5.0 (X11; Linux x86_64; rv:62.0) Gecko/20100101 Firefox/62.0"
+export CHROME_BINARY=/usr/bin/chromium
+export CHROME_USER_DATA_DIR="$XDG_RUNTIME_DIR"/chromium/$(date --iso-8601=s)
+export OUTPUT_DIR=~/library/bookmarks
+export USE_COLOR=false
+export SHOW_PROGRESS=false
+
+~/library/src/bookmark-archiver/archive ~/library/conf/pinboard.json
