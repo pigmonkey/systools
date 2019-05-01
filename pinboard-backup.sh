@@ -10,6 +10,7 @@ if curl -Ss "https://api.pinboard.in/v1/posts/all?auth_token=$PINBOARD_USER:$PIN
         cd "$destination"
         git annex edit pinboard.json
         mv "$tmp" "$destination/pinboard.json"
+        git annex add pinboard.json
         git annex sync -m "pinboard update"
         $HOME/bin/bookmark-archiver
     else
