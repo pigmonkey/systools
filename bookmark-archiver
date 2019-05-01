@@ -6,5 +6,7 @@ export CHROME_USER_DATA_DIR="$XDG_RUNTIME_DIR"/chromium/$(date --iso-8601=s)
 export OUTPUT_DIR=~/library/bookmarks
 export USE_COLOR=false
 export SHOW_PROGRESS=false
+export FETCH_MEDIA=false
+export FETCH_GIT=false
 
 ~/library/src/bookmark-archiver/archive ~/library/conf/pinboard.json
