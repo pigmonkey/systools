@@ -1,4 +1,4 @@
 #!/bin/sh
-khal calendar
+khal list -d "Work: Staff" --format "{calendar-color}{start-time-full} - {end-time-full} {title}"
 task list
 read -p "Press Enter to quit."
